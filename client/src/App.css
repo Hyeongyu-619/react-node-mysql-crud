@@ -1,38 +1,112 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "nanumsquare";
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.black-nav {
+  background: #3c6255;
+  width: 100%;
   color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.new-post-button {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background-color: #61876e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.post-buttons button {
+  background-color: #61876e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.input-title,
+.input-content {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.input-title::placeholder,
+.input-content::placeholder {
+  color: #999;
+}
+
+.input-content {
+  height: 150px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-list {
+  text-align: left;
+  padding: 20px;
 }
